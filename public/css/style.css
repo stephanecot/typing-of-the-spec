@@ -16,12 +16,12 @@
 }
 
 :root {
-  --green: #39ff7a;
-  --green-dim: #1d7a44;       /* décor uniquement (contraste insuffisant pour du petit texte) */
-  --green-dim-text: #2da55e;  /* même teinte, contraste AA pour le petit texte */
+  --green: #39d0ff;
+  --green-dim: #1a5f7a;       /* décor uniquement (contraste insuffisant pour du petit texte) */
+  --green-dim-text: #3a9fc4;  /* même teinte, contraste AA pour le petit texte */
   --amber: #ffb000;
   --red: #ff3b3b;
-  --bg: #020503;
+  --bg: #04080c;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -38,7 +38,7 @@ html, body {
   position: relative;
   width: 100vw;
   height: 100vh;
-  background: radial-gradient(ellipse at center, #07120b 0%, #020503 75%);
+  background: radial-gradient(ellipse at center, #07141e 0%, #04080c 75%);
 }
 
 #game-container {
@@ -49,7 +49,7 @@ html, body {
   border-radius: 18px;
   box-shadow:
     inset 0 0 120px rgba(0, 0, 0, 0.55),
-    0 0 60px rgba(57, 255, 122, 0.10);
+    0 0 60px rgba(57, 208, 255, 0.10);
 }
 
 /* scanlines */
@@ -94,7 +94,7 @@ html, body {
   inset: 0;
   pointer-events: none;
   z-index: 13;
-  background: rgba(160, 255, 190, 0.025);
+  background: rgba(150, 220, 255, 0.025);
   animation: flicker 0.12s infinite;
 }
 @keyframes flicker {
@@ -122,10 +122,10 @@ html, body {
   pointer-events: auto;
   width: min(580px, 46vw);
   padding: 30px 36px;
-  background: rgba(4, 14, 8, 0.97);
+  background: rgba(4, 10, 18, 0.97);
   border: 2px solid var(--green-dim);
   border-radius: 10px;
-  box-shadow: 0 0 50px rgba(57, 255, 122, 0.18), inset 0 0 30px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 50px rgba(57, 208, 255, 0.18), inset 0 0 30px rgba(0, 0, 0, 0.6);
   font-family: 'VT323', monospace;
   color: var(--green);
 }
@@ -160,13 +160,13 @@ html, body {
   font-family: 'VT323', monospace;
   font-size: 28px;
   color: var(--amber);
-  background: #020503;
+  background: #04080c;
   border: 1px solid var(--green-dim);
   border-radius: 4px;
   outline: none;
   caret-color: var(--green);
 }
-#save-form input:focus { border-color: var(--green); box-shadow: 0 0 12px rgba(57, 255, 122, 0.3); }
+#save-form input:focus { border-color: var(--green); box-shadow: 0 0 12px rgba(57, 208, 255, 0.3); }
 
 #save-form .consent {
   display: flex;
@@ -179,7 +179,7 @@ html, body {
 }
 #save-form .consent input {
   width: 22px; height: 22px;
-  accent-color: #39ff7a;
+  accent-color: #39d0ff;
   flex-shrink: 0;
   margin-top: 2px;
 }
@@ -203,14 +203,14 @@ html, body {
   background: var(--green);
   color: #03140a;
 }
-.form-actions button:hover { box-shadow: 0 0 16px rgba(57, 255, 122, 0.5); }
+.form-actions button:hover { box-shadow: 0 0 16px rgba(57, 208, 255, 0.5); }
 #btn-skip { border-color: var(--green-dim); color: var(--green-dim-text); }
 
 /* focus clavier visible sur les boutons (les inputs ont déjà leur style :focus) */
 .form-actions button:focus-visible {
   outline: 2px solid var(--green);
   outline-offset: 3px;
-  box-shadow: 0 0 16px rgba(57, 255, 122, 0.5);
+  box-shadow: 0 0 16px rgba(57, 208, 255, 0.5);
 }
 
 /* ------------------------------------------------ animations réduites */

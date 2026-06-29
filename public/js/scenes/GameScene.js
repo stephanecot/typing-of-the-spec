@@ -186,10 +186,10 @@ class GameScene extends Phaser.Scene {
      on ne les double pas ici. */
   buildCrtBackground() {
     const g = this.add.graphics().setDepth(-3);
-    g.fillGradientStyle(0x0a1a10, 0x0a1a10, 0x02050a, 0x02050a, 1);
+    g.fillGradientStyle(0x0a1622, 0x0a1622, 0x04080c, 0x04080c, 1);
     g.fillRect(0, 0, GAME_W, GAME_H);
     // halo central très léger, comme un tube qui chauffe au milieu
-    g.fillStyle(0x0e2415, 0.25);
+    g.fillStyle(0x0e2a3a, 0.25);
     g.fillEllipse(GAME_W / 2, GAME_H / 2, GAME_W * 1.1, GAME_H * 0.9);
     // lueur cyan derrière le serveur PROD, pour ancrer ce qu'on défend
     g.fillStyle(0x0a2e33, 0.30);
@@ -629,7 +629,7 @@ class GameScene extends Phaser.Scene {
       typo: { color: CSS.green, tint: PALETTE.green, speed: 46, art: 'typo', cls: 'bug', size: 17, level: 1 },
       deadline: { color: CSS.magenta, tint: PALETTE.magenta, speed: 75, art: 'deadline', cls: 'deadline', size: 17, level: 2 },
       legacy: { color: CSS.amber, tint: PALETTE.amber, speed: 26, art: 'legacy', cls: 'legacy', size: 18, level: 2 },
-      elite: { color: CSS.green, tint: PALETTE.green, speed: 34, art: 'bug', cls: 'bug', size: 22, level: 3 },
+      elite: { color: CSS.amber, tint: PALETTE.amber, speed: 34, art: 'bug', cls: 'bug', size: 22, level: 3 },
       spammer: { color: CSS.cyan, tint: PALETTE.cyan, speed: 20, art: 'spammer', cls: 'deadline', size: 18, level: 3 },
       ghost: { color: CSS.white, tint: PALETTE.white, speed: 48, art: 'ghost', cls: 'bug', size: 18, level: 2 },
       virus: { color: CSS.red, tint: PALETTE.red, speed: 55, art: 'virus', cls: 'bug', size: 17, level: 2 },
@@ -639,7 +639,7 @@ class GameScene extends Phaser.Scene {
       spec: { color: CSS.white, tint: PALETTE.white, speed: 40, art: 'spec', cls: 'deadline', size: 17, level: 3 },
       // niv.4 et 5 : réservés aux difficultés CTO BURNOUT et DIEU DU TERMINAL
       consultant: { color: CSS.gold, tint: PALETTE.gold, speed: 48, art: 'consultant', cls: 'deadline', size: 18, level: 4 },
-      obfuscator: { color: CSS.white, tint: PALETTE.white, speed: 45, art: 'obfuscator', cls: 'legacy', size: 18, level: 4 },
+      obfuscator: { color: CSS.gold, tint: PALETTE.gold, speed: 45, art: 'obfuscator', cls: 'legacy', size: 18, level: 4 },
       ransomware: { color: CSS.red, tint: PALETTE.red, speed: 32, art: 'ransomware', cls: 'legacy', size: 18, level: 5 },
       po: { color: CSS.magenta, tint: PALETTE.magenta, speed: 24, art: 'po', cls: 'deadline', size: 18, level: 5 },
     }[kind];

@@ -10,23 +10,25 @@ const GAME_H = 900;
    temps si le joueur va au bout des sprints. */
 const PAR_SECONDS_PER_SPRINT = 60;
 
+/* Palette CYAN/BLEU "corporate" — distincte du vert de Typing of the Dev.
+   NB : la clé "green" reste le nom historique de la couleur PRIMAIRE du jeu,
+   mais elle porte ici une teinte cyan ; "cyan" devient un accent bleu. */
 const PALETTE = {
-  bg: 0x050a07,
-  green: 0x39ff7a,
-  greenDim: 0x1d7a44,
+  bg: 0x04080c,
+  green: 0x39d0ff,   // primaire (cyan vif)
+  greenDim: 0x1a5f7a,
   amber: 0xffb000,
-  red: 0xff3b3b,
+  red: 0xff4d4d,
   magenta: 0xff5cf0,
   gold: 0xffd76a,
-  cyan: 0x41f2ff,
-  white: 0xeafff0,
+  cyan: 0x7c8cff,    // accent (bleu périwinkle)
+  white: 0xeafdff,
 };
 const CSS = {
-  green: '#39ff7a', greenDim: '#1d7a44', amber: '#ffb000', red: '#ff3b3b',
-  magenta: '#ff5cf0', gold: '#ffd76a', cyan: '#41f2ff', white: '#eafff0',
-  // même teinte que greenDim mais contraste AA (≥4.5:1) : pour le petit texte
-  // informatif ; greenDim reste réservé au décor et aux grands textes
-  greenSoft: '#2da55e',
+  green: '#39d0ff', greenDim: '#1a5f7a', amber: '#ffb000', red: '#ff4d4d',
+  magenta: '#ff5cf0', gold: '#ffd76a', cyan: '#7c8cff', white: '#eafdff',
+  // même famille que la primaire mais contraste AA (≥4.5:1) : petit texte info
+  greenSoft: '#3a9fc4',
 };
 
 /* MODES DE JEU (touche I au menu, persistés). Trois modes cyclés dans cet ordre :
@@ -106,7 +108,7 @@ window.addEventListener('load', () => {
     parent: 'game-container',
     width: GAME_W,
     height: GAME_H,
-    backgroundColor: '#050a07',
+    backgroundColor: '#04080c',
     scale: {
       mode: Phaser.Scale.FIT,
       autoCenter: Phaser.Scale.CENTER_BOTH,

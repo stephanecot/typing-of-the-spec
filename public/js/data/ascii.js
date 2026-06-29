@@ -104,10 +104,10 @@ const ASCII = {
   ransomware: [
     '  .--.\n /.--.\\\n ||  ||\n.-====-.\n|AVENANT|\n\'------\'',
   ],
-  // COMITÉ DE PILOTAGE : la table de COPIL
+  // COMITÉ DE PILOTAGE : la table de COPIL et ses décideurs
   boss: [
-    '   ___COPIL___\n  | (o) (o) (o)|\n  |   _____    |\n  |  /TABLE\\   |\n   \\_________/\n   _|=======|_\n  / |=======| \\\n    |=|   |=|',
-    '   __STEERCO__\n  /==||==||==\\\n | (o)(o)(o) |\n |  ======   |\n  \\_________/\n _|#######|_\n/ |#######| \\\n  |_|   |_|',
+    '  (o)  (o)  (o)\n   |    |    |\n .--------------.\n |   C O P I L  |\n |  [==] [==]   |\n \'--------------\'\n    |  |   |  |',
+    '  (O)  (O)  (O)\n  /|\\  /|\\  /|\\\n .==============.\n |  STEER  CO   |\n |  ::::::::::  |\n \'=============\'\n    |   |   |',
   ],
   // Boss du mode infini
   mainframe: [

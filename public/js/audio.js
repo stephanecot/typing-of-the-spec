@@ -130,14 +130,14 @@ const Sfx = {
 
 const TRACKS = [
   {
-    name: 'MATRIX', // chiptune sombre en La mineur (la piste historique)
-    BASS: [55, 0, 55, 0, 65.4, 0, 55, 0, 41.2, 0, 55, 0, 49, 0, 55, 0],
-    BASS_BOSS: [55, 55, 51.9, 51.9, 55, 55, 61.7, 49, 55, 55, 51.9, 51.9, 65.4, 0, 49, 0],
-    ARP: [220, 261.6, 329.6, 392, 440, 392, 329.6, 261.6, 220, 261.6, 329.6, 523.3, 440, 392, 329.6, 261.6],
-    MENU_BASS: [110, 87.3, 130.8, 98],
-    MENU_ARP: [220, 261.6, 329.6, 440, 174.6, 220, 261.6, 349.2, 261.6, 329.6, 392, 523.3, 196, 246.9, 293.7, 392],
-    MENU_MELODY: [440, 0, 523.3, 0, 440, 392, 0, 329.6, 0, 0, 392, 0, 440, 0, 0, 0],
-    bpm(i) { return i === 0 ? 82 : i >= 4 ? 150 : 104 + i * 10; },
+    name: 'OPEN SPACE', // nappe feutrée en Ré dorien : l'open space avant le café
+    BASS: [49, 0, 49, 0, 58.3, 0, 49, 0, 36.7, 0, 49, 0, 43.7, 0, 49, 0],
+    BASS_BOSS: [49, 49, 43.7, 43.7, 49, 49, 55, 43.7, 49, 49, 43.7, 43.7, 58.3, 0, 43.7, 0],
+    ARP: [293.7, 349.2, 440, 523.3, 587.3, 523.3, 440, 349.2, 293.7, 349.2, 440, 587.3, 523.3, 440, 349.2, 293.7],
+    MENU_BASS: [98, 73.4, 110, 87.3],
+    MENU_ARP: [293.7, 349.2, 440, 587.3, 220, 293.7, 349.2, 466.2, 349.2, 440, 523.3, 698.5, 261.6, 329.6, 392, 523.3],
+    MENU_MELODY: [587.3, 0, 698.5, 0, 587.3, 523.3, 0, 440, 0, 0, 523.3, 0, 587.3, 0, 0, 0],
+    bpm(i) { return i === 0 ? 68 : i >= 4 ? 132 : 90 + i * 9; },
     step(s, when, I) {
       if (I === 0) {
         const chord = Math.floor(s / 4);
@@ -169,15 +169,15 @@ const TRACKS = [
   },
 
   {
-    name: 'SYNTHWAVE', // nappes planantes en Fa mineur, kick régulier, arpège cristallin
-    ROOTS: [43.7, 51.9, 38.9, 34.7], // F1, Ab1, Eb1, Db1
+    name: 'DAILY STANDUP', // nappes en Do mineur, kick régulier : le rituel de 9h
+    ROOTS: [32.7, 38.9, 49, 43.7], // C1, Eb1, G1, F1
     PADS: [
-      [174.6, 207.7, 261.6], // Fm
-      [207.7, 261.6, 311.1], // Ab
+      [130.8, 155.6, 196],   // Cm
       [155.6, 196, 233.1],   // Eb
-      [138.6, 174.6, 220],   // Db
+      [196, 233.1, 293.7],   // Gm
+      [174.6, 207.7, 261.6], // Fm
     ],
-    bpm(i) { return i === 0 ? 74 : i >= 4 ? 138 : 96 + i * 10; },
+    bpm(i) { return i === 0 ? 78 : i >= 4 ? 142 : 100 + i * 10; },
     step(s, when, I) {
       const chord = Math.floor(s / 4);
       if (s % 4 === 0) {
@@ -201,10 +201,10 @@ const TRACKS = [
   },
 
   {
-    name: 'LOUNGE', // jazz d'ascenseur swingué : walking bass et mélodie pentatonique
-    WALK: [65.4, 0, 82.4, 0, 55, 0, 65.4, 0, 73.4, 0, 87.3, 0, 49, 0, 61.7, 0],
-    MEL: [330, 0, 392, 0, 440, 0, 392, 330, 0, 294, 0, 262, 0, 294, 330, 0],
-    bpm(i) { return i === 0 ? 80 : i >= 4 ? 132 : 88 + i * 8; },
+    name: 'ASCENSEUR', // jazz d'ascenseur swingué : la muzak du comité, en Fa
+    WALK: [43.7, 0, 58.3, 0, 65.4, 0, 49, 0, 43.7, 0, 55, 0, 65.4, 0, 49, 0],
+    MEL: [349.2, 0, 440, 0, 523.3, 0, 440, 349.2, 0, 392, 0, 293.7, 0, 349.2, 392, 0],
+    bpm(i) { return i === 0 ? 76 : i >= 4 ? 128 : 84 + i * 8; },
     step(s, when, I) {
       const bass = this.WALK[s];
       if (bass) Sfx.tone({ type: 'sine', f: bass, dur: 0.34, vol: I === 0 ? 0.18 : 0.26, when, dest: Sfx.music });
@@ -230,9 +230,9 @@ const TRACKS = [
   },
 
   {
-    name: 'RAVE', // techno acide en Mi phrygien : kick 4/4 et basse 16e
-    ACID: [41.2, 41.2, 43.7, 41.2, 41.2, 49, 41.2, 55, 41.2, 41.2, 43.7, 41.2, 61.7, 55, 49, 43.7],
-    bpm(i) { return i === 0 ? 92 : i >= 4 ? 160 : 122 + i * 8; },
+    name: 'DEADLINE', // techno tendue en La mineur : le sprint se termine ce soir
+    ACID: [55, 55, 58.3, 55, 55, 65.4, 55, 73.4, 55, 55, 49, 55, 82.4, 73.4, 65.4, 58.3],
+    bpm(i) { return i === 0 ? 98 : i >= 4 ? 168 : 130 + i * 8; },
     step(s, when, I) {
       if (I === 0) {
         if (s % 4 === 0) Sfx.tone({ type: 'sine', f: this.ACID[s], dur: 0.6, vol: 0.2, when, dest: Sfx.music });
@@ -250,10 +250,10 @@ const TRACKS = [
   },
 
   {
-    name: '8-BIT HERO', // hymne majeur héroïque : C-F-Am-G qui pulse à l'octave
-    ROOTS: [65.4, 87.3, 110, 98],
-    MEL: [523.3, 0, 659.3, 784, 698.5, 0, 659.3, 587.3, 659.3, 0, 523.3, 440, 493.9, 523.3, 587.3, 0],
-    bpm(i) { return i === 0 ? 84 : i >= 4 ? 160 : 110 + i * 10; },
+    name: 'TEAM BUILDING', // hymne majeur entrainant en Sol : G-C-Em-D, l'after-work
+    ROOTS: [49, 65.4, 82.4, 73.4],
+    MEL: [587.3, 0, 740, 880, 784, 0, 740, 659.3, 659.3, 0, 587.3, 493.9, 587.3, 659.3, 740, 0],
+    bpm(i) { return i === 0 ? 86 : i >= 4 ? 158 : 112 + i * 10; },
     step(s, when, I) {
       const root = this.ROOTS[Math.floor(s / 4)];
       if (I === 0) {
