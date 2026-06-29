@@ -1,0 +1,37 @@
+{
+  "name": "typings-of-the-spec",
+  "version": "1.0.0",
+  "description": "Arcade typing game for Business Analysts — vague needs, scope creep and stakeholders march toward your PROJECT; type to clarify them before the sprint. Phaser 3, procedural WebAudio music, 100% static, zero dependencies.",
+  "scripts": {
+    "check": "node scripts/check.mjs"
+  },
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "license": "MIT",
+  "keywords": [
+    "game",
+    "typing-game",
+    "phaser",
+    "phaser3",
+    "arcade",
+    "retro",
+    "ascii-art",
+    "crt",
+    "webaudio",
+    "business-analyst",
+    "static",
+    "zero-dependencies",
+    "offline-first",
+    "typing-of-the-dead"
+  ],
+  "homepage": "https://github.com/stephanecot/typing-of-the-spec#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stephanecot/typing-of-the-spec.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stephanecot/typing-of-the-spec/issues"
+  },
+  "author": "Stéphane Cottin"
+}

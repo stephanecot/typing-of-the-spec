@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TYPINGS OF THE SPEC — clarifiez avant le sprint</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="crt-frame">
+    <div id="game-container" role="application"
+         aria-label="Typings of the Spec — jeu de dactylographie pour Business Analyst, entièrement au clavier"></div>
+    <div class="crt-scanlines" aria-hidden="true"></div>
+    <div class="crt-rgb" aria-hidden="true"></div>
+    <div class="crt-vignette" aria-hidden="true"></div>
+    <div class="crt-flicker" aria-hidden="true"></div>
+  </div>
+
+  <script src="lib/phaser.min.js"></script>
+  <!-- main.js d'abord : il définit les constantes globales (GAME_W, PALETTE…)
+       et ne référence les scènes qu'à l'évènement window load -->
+  <script src="js/main.js"></script>
+  <script src="js/data/i18n.js"></script>
+  <script src="js/data/words.js"></script>
+  <script src="js/data/ascii.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/scenes/BootScene.js"></script>
+  <script src="js/scenes/MenuScene.js"></script>
+  <script src="js/scenes/GameScene.js"></script>
+  <script src="js/scenes/GameOverScene.js"></script>
+</body>
+</html>

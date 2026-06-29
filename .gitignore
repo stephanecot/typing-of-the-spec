@@ -1,0 +1,13 @@
+# Node
+node_modules/
+npm-debug.log*
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# NB : public/lib/phaser.min.js et public/fonts/ sont volontairement versionnés
+# (vendorés pour fonctionner offline, sans npm install)
